@@ -135,6 +135,102 @@
             </objects>
             <point key="canvasLocation" x="57.971014492753625" y="-2.0089285714285712"/>
         </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ZkO-SP-7hY">
+            <objects>
+                <viewController id="4dC-gG-Dfc" customClass="MainViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2RO-au-R1W">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vBO-rA-ZNf">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="woS-9y-GTT">
+                                    <size key="itemSize" width="388" height="54"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="pus-JH-HyI" customClass="MainCollectionViewCell" customModule="Notes" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="0.0" width="388" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainCollectionViewCell" insetsLayoutMarginsFromSafeArea="NO" id="Rhy-Qb-PPV" customClass="MainCollectionViewCell" customModule="Notes" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH3-1F-Wsz">
+                                                    <rect key="frame" x="8" y="15" width="48" height="24"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="CH3-1F-Wsz" firstAttribute="top" secondItem="Rhy-Qb-PPV" secondAttribute="top" constant="15" id="1iy-Gw-SDd"/>
+                                                <constraint firstAttribute="bottom" secondItem="CH3-1F-Wsz" secondAttribute="bottom" constant="15" id="24Q-UR-I5I"/>
+                                                <constraint firstItem="CH3-1F-Wsz" firstAttribute="leading" secondItem="Rhy-Qb-PPV" secondAttribute="leading" constant="8" id="lpy-Jc-Dgw"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="388" height="54"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="CH3-1F-Wsz" id="tGz-Tp-5WQ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ocV-NE-kIt"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vBO-rA-ZNf" firstAttribute="bottom" secondItem="ocV-NE-kIt" secondAttribute="bottom" id="3ud-CX-D3e"/>
+                            <constraint firstItem="vBO-rA-ZNf" firstAttribute="leading" secondItem="ocV-NE-kIt" secondAttribute="leading" id="4J1-Dz-wot"/>
+                            <constraint firstItem="vBO-rA-ZNf" firstAttribute="trailing" secondItem="ocV-NE-kIt" secondAttribute="trailing" id="nRI-7O-z6H"/>
+                            <constraint firstItem="vBO-rA-ZNf" firstAttribute="top" secondItem="ocV-NE-kIt" secondAttribute="top" id="w7f-uC-KQy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcv-FK-owJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="vBO-rA-ZNf" id="F3X-TT-y3v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgG-l4-nXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="-2.0089285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0qH-8O-1id">
+            <objects>
+                <navigationController storyboardIdentifier="HomeVC" automaticallyAdjustsScrollViewInsets="NO" id="VUh-Le-FJG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIV-Ty-zTD">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4dC-gG-Dfc" kind="relationship" relationship="rootViewController" id="Ucj-Jo-VEK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Erk-Mp-EJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="-2.0089285714285712"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="AccentColor">
